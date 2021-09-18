@@ -1,0 +1,11 @@
+title: Родинне тепло
+description: Родинне тепло - достойна старість для Ваших батьків
+tel1: 380507325247
+tel1-format: 380 50 732 52 47
+tel2: 380966046356
+tel2-format: 380 96 604 63 56
+
+exclude:
+  - /js/!main.min.js
+  - /js/main - Copy.js
+  
