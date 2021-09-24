@@ -858,20 +858,19 @@ h6 {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .footer .social__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 22%;
-  flex: 0 0 22%;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
 }
 
 .footer .social__item svg {
-  /* max-width: 100%; */
   display: block;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
 }
 
 .footer__address {
