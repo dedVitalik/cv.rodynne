@@ -858,19 +858,19 @@ h6 {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer .social__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
 }
 
 .footer .social__item svg {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 
 .footer__address {
@@ -1271,6 +1271,18 @@ h6 {
     margin: 0 0 165px 0;
   }
 
+  .footer .social__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+  }
+
+  .footer .social__item svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
   .header__row--3 ._container {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -1294,11 +1306,20 @@ h6 {
     flex: 0 0 45%;
   }
 
+  .footer__col--logo svg {
+    display: block;
+    width: 255px;
+    height: 73px;
+  }
+
   .footer__col--social {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 45%;
     flex: 0 0 45%;
     margin: 0 0 0 0 !important;
+    /* align-items: center; */
+    /* display: flex; */
+    padding-top: 10px;
   }
 
   .footer__col--address {
@@ -1614,23 +1635,35 @@ h6 {
     margin: 0 !important;
   }
 
+  .footer__col--address {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+
   .footer__logo {
     width: 100%;
   }
 
   .footer .social__body {
-    max-width: 90px;
+    max-width: 75px;
     display: flex;
+    justify-content: space-around;
   }
 
   .footer .social__item {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 40px;
-    flex: 0 0 40px;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
   }
 
   .footer .social__item img {
     width: 100%;
+  }
+
+  .footer .social__item svg {
+    display: block;
+    width: 30px;
+    height: 30px;
   }
 
   .footer .social__item:nth-child(1),
@@ -1676,9 +1709,35 @@ h6 {
   }
 }
 
+@media (min-width: 1090px) {
+  .footer .social__body {
+    max-width: 85px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer .social__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+  }
+
+  .footer .social__item svg {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @media (min-width: 1200px) {
   .header__row--2 {
     margin: 0 0 270px 0;
+  }
+
+  .footer .social__body {
+    max-width: 90px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

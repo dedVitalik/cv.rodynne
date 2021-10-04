@@ -18,14 +18,14 @@ const svgstore = require('gulp-svgstore');
 
 const svgSprite = () => {
   return gulp
-    .src('img/icons/*.svg')
+    .src('img/svgs/*.svg')
     .pipe(
       svgstore({
         inlineSvg: true,
       })
     )
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('img/social'));
+    .pipe(rename('sprite-big.svg'))
+    .pipe(gulp.dest('img/sprite'));
 };
 
 exports.svgSprite = svgSprite;
