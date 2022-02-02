@@ -368,6 +368,12 @@ h6 {
   margin: 0 0 0 12px;
 }
 
+.header__logo svg{
+   display: inline-block;
+  max-width: 150px;
+  
+}
+
 .header .menu {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
