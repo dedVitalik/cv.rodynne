@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
-  setTimeout(function () {
-    document.body.classList.remove("preload");
-  }, 500);
+  // setTimeout(function () {
+  //   document.body.classList.remove("preload");
+  // }, 500);
 
   var windowHeight = window.innerHeight,
     windowHeightExtra = 0;
@@ -133,17 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (support == true) {
       document.querySelector("body").classList.add("webp");
     }
-  }); // Set IMG as Background
-
-  // function setBackground() {
-  //   var setBackground = document.querySelectorAll("._bg");
-
-  //   for (var i = 0; i < setBackground.length; i++) {
-  //     if (setBackground[i].querySelector('img')) {
-  //       setBackground[i].style.backgroundImage = 'url(' + setBackground[i].querySelector('img').getAttribute('src') + ')';
-  //     }
-  //   }
-  // }
+  }); 
 
   function setBackground() {
     var setBackground = document.querySelectorAll("._bg");

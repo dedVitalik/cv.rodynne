@@ -5,7 +5,9 @@ tel1-format: 380 50 732 52 47
 tel2: 380966046356
 tel2-format: 380 96 604 63 56
 
+incremental: true
+
 exclude:
   - /js/!main.min.js
   - /js/main - Copy.js
-  
+  - /source/

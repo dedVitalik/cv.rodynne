@@ -1,17 +1,17 @@
 const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const sourcemap = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
-const terser = require('gulp-terser');
-const postcss = require('gulp-postcss');
-const csso = require('postcss-csso');
-const autoprefixer = require('autoprefixer');
+// const plumber = require('gulp-plumber');
+// const sourcemap = require('gulp-sourcemaps');
+// const sass = require('gulp-sass');
+// const terser = require('gulp-terser');
+// const postcss = require('gulp-postcss');
+// const csso = require('postcss-csso');
+// const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
-const sync = require('browser-sync').create();
-const htmlmin = require('gulp-htmlmin');
-const squoosh = require('gulp-libsquoosh');
-const webp = require('gulp-webp');
-const del = require('del');
+// const sync = require('browser-sync').create();
+// const htmlmin = require('gulp-htmlmin');
+// const squoosh = require('gulp-libsquoosh');
+// const webp = require('gulp-webp');
+// const del = require('del');
 const svgstore = require('gulp-svgstore');
 
 // svg sprite
