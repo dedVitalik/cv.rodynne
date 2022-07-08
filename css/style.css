@@ -854,7 +854,7 @@ h6 {
 }
 
 .footer__logo {
-  display: inline-block;
+  display: block;
   max-width: 255px;
 }
 
@@ -877,8 +877,8 @@ h6 {
 
 .footer .social__item svg {
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
 }
 
 .footer__address {
@@ -1279,6 +1279,12 @@ h6 {
     margin: 0 0 165px 0;
   }
 
+  .footer .social__body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
   .footer .social__item {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40px;
@@ -1287,8 +1293,6 @@ h6 {
 
   .footer .social__item svg {
     display: block;
-    width: 40px;
-    height: 40px;
   }
 
   .header__row--3 ._container {
@@ -1312,6 +1316,7 @@ h6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 45%;
     flex: 0 0 45%;
+    margin-bottom: 30px;
   }
 
   .footer__col--logo svg {
@@ -1322,9 +1327,10 @@ h6 {
 
   .footer__col--social {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 45%;
-    flex: 0 0 45%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
     margin: 0 0 0 0 !important;
+    padding-top: 5px;
   }
 
   .footer__col--address {
@@ -1373,12 +1379,29 @@ h6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 45%;
     flex: 0 0 45%;
+    padding-top: 5px;
   }
 
   .footer__col--cities {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 45%;
     flex: 0 0 45%;
+  }
+}
+
+@media (min-width: 568px) {
+  .footer__col--social {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+    margin: 0 0 0 0 !important;
+    padding-top: 5px;
+  }
+
+  .footer .social__item svg {
+    display: block;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -1415,10 +1438,8 @@ h6 {
   }
 
   .section-text p {
-    /* color: #7a7979; */
     font-size: 20px;
     line-height: 28px;
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   }
 
   .header._copy {
@@ -1550,6 +1571,14 @@ h6 {
     display: none;
   }
 
+  .footer__col--social {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45%;
+    flex: 0 0 45%;
+    margin: 0 0 0 0 !important;
+    padding-top: 5px;
+  }
+
   .footer .cities__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1656,6 +1685,7 @@ h6 {
     max-width: 75px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .footer .social__item {
