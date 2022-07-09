@@ -777,6 +777,12 @@ h6 {
   margin: 0 10px 0 0;
 }
 
+.header .banner__row--bottom a svg {
+  max-width: 25px;
+  max-height: 25px;
+  margin: 0 10px 0 0;
+}
+
 .header .banner__row--bottom a span {
   font-family: 'Arial';
   font-size: 22px;
