@@ -255,7 +255,7 @@ h6 {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url(/img/list-marker.png) center/contain no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle fill='%236EE4E0' cx='7.5' cy='7.5' r='7.5' fill-rule='evenodd'/%3E%3C/svg%3E");
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -942,7 +942,10 @@ h6 {
   flex: 0 0 25px;
   height: 25px;
   margin: 0 10px 0 0;
-  background: url(/img/list-house-marker.png) center/contain no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M6.92 3c-.5.1-.6.33-1.11.62C4.09 4.7 4.19 4.7 2.68 6.12-1.82 10.4-.25 17.89 4.34 21.3a21.1 21.1 0 0 0 4.09 2.27c2.52 1.19 3.83 1.8 6.96 1.19 1.46-.24 1.67-.43 2.78-.95.4-.19 2.72-.95 1.46-1.7-.6-.34-2.22.66-2.73.94-1.2.57-1.76.05-3.22-.05v-.47c.6 0 2.22.1 2.62-.1.7-.33.6-1.18-.5-1.28l-5.15-.18c-1.67.09-1.72.61-3.94-.95-5.2-3.56-5.55-9-2.01-14.03L6.3 3.76c.4-.43.4-.2.56-.76h.05Z' fill='%23659803'/%3E%3Cpath d='M5 2.17c.4 1.42.86.85 3.18-.23 1.06-.48 1.87 0 3.08.04v.47c-1 0-3.03-.28-3.03.71 0 .95 1.32.62 2.28.71l3.43.14c2.02 0 2.02-.47 3.59.47 6.97 4.11 6.16 10.96 1.36 16.48L18.03 22a9.92 9.92 0 0 0 2.43-1.56c1.51-1.18 1-.85 2.07-1.89 4.04-3.96 2.88-11.1-1.67-14.63C19.09 2.45 14.5 0 11.46 0c-1.3 0-2.52.33-3.53.7-.86.34-2.32.86-2.93 1.42v.05Z' fill='%23FE9603'/%3E%3Cpath d='M9.93 11.69c1.42.14 1.32.93 1.37 1.11 1.23 5.71-1.94 5.57-1.37 2.88.25-1.02-.62-1.49 0-4Zm1.68-.47c-1.23-.55-.61-.7-.56-1.8 3.36-.05.1-3.63-.77-1.4-.35.98.41.23-.4.93-.72.65-1.33 1.07-1.84 1.8C6.3 13.04 6.6 13.28 6 15.64h.92l-.3 1.86c.04.6-.06.46 1.93.46-.2-.46-.26-.37-.92-.7 0-.32.15-.74.26-1.06.25-.51.1-.46.81-.56l.51 1.67c.1.24-.05.42.66.56l3.32.05c-.2-.47-.3-.14-.72-.65.26-.47.36-1.02.36-1.77.82.51.61 1.54 1.07 2.42h1.84c-.2-.65-.05-.47-.92-.47-.51-1.85-1.84-5.66.2-6.87.67.14.36.1.77.56l.76.74c1.53 1.3.72 1.02 1.74 1.02-.2.42-.92 4.32-.92 5.11.71-.46.92-3.25 1.07-4.13.2-1.07.36-.74.56-1.3a8.84 8.84 0 0 1-1.94-1.35c-1.02-.92-.71-1.02-1.27-2.08 2.4-.52 1.12-2.14.15-2.14-.76 0-.81.46-1.12.93-.66 1.11-2.45.46-3.16 3.34l-.05-.05Z' fill='%23FEFEFE'/%3E%3C/g%3E%3C/svg%3E");
+  transform: translate(0, 4px);
+  -webkit-transform: translate(0, 4px);
+  -ms-transform: translate(0, 4px);
 }
 
 .pluses {
@@ -1015,6 +1018,8 @@ h6 {
 
 .about__video {
   position: relative;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .about__video iframe {
@@ -1266,14 +1271,6 @@ h6 {
 
 .video__content iframe {
   max-width: 100%;
-}
-
-.webp .section-list li::after {
-  background: url(/img/list-marker.webp) center/contain no-repeat;
-}
-
-.webp .footer .cities__list li::before {
-  background: url(/img/list-house-marker.webp) center/contain no-repeat;
 }
 
 @media (min-width: 360px) {
