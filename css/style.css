@@ -1744,6 +1744,10 @@ h6 {
     padding: 0 0 0 0;
   }
 
+  .care__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .testimonials__grid {
     grid-template-columns: repeat(3, 1fr);
   }
