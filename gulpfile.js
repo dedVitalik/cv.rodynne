@@ -1,18 +1,19 @@
 const gulp = require('gulp');
-// const plumber = require('gulp-plumber');
-// const sourcemap = require('gulp-sourcemaps');
-// const sass = require('gulp-sass');
-// const terser = require('gulp-terser');
-// const postcss = require('gulp-postcss');
-// const csso = require('postcss-csso');
-// const autoprefixer = require('autoprefixer');
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+//const sass = require('gulp-sass');
+const terser = require('gulp-terser');
+const postcss = require('gulp-postcss');
+//const csso = require('postcss-csso');
+//const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
-// const sync = require('browser-sync').create();
-// const htmlmin = require('gulp-htmlmin');
-// const webp = require('gulp-webp');
-// const del = require('del');
+const sync = require('browser-sync').create();
+//const htmlmin = require('gulp-htmlmin');
+//const webp = require('gulp-webp');
+//const del = require('del');
 const svgstore = require('gulp-svgstore');
 const cleanCSS = require('gulp-clean-css');
+const minify = require('gulp-minify');
 
 // svg sprite
 
@@ -41,23 +42,6 @@ const minifyStyles = () => {
 
 exports.minifyStyles = minifyStyles;
 
-// Styles
-
-// const minifyStyles = () => {
-//   return gulp
-//     .src("source/sass/style.scss")
-//     .pipe(plumber())
-//     .pipe(sourcemap.init())
-//     .pipe(sass())
-//     .pipe(postcss([autoprefixer(), csso()]))
-//     .pipe(rename("style.min.css"))
-//     .pipe(sourcemap.write("."))
-//     .pipe(gulp.dest("build/css"))
-//     .pipe(sync.stream());
-// };
-//
-// exports.minifyStyles = minifyStyles;
-
 // HTML
 
 // const minifyHTML = () => {
@@ -69,20 +53,28 @@ exports.minifyStyles = minifyStyles;
 
 // exports.minifyHTML = minifyHTML;
 
-
-
 // Scripts
 
+
+
 // const minifyScripts = () => {
-//   return gulp
-//     .src("source/js/main.js")
-//     .pipe(terser())
-//     .pipe(rename("main.min.js"))
-//     .pipe(gulp.dest("build/js"))
-//     .pipe(sync.stream());
+//     return gulp
+//         .src("js/main.js")
+//         .pipe(minify())
+//         .pipe(rename("main.min.js"))
+//         .pipe(gulp.dest('js'))
 // };
 
-// exports.minifyScripts = minifyScripts;
+const minifyScripts = () => {
+  return gulp
+    .src("js/main.js")
+    .pipe(terser())
+    .pipe(rename("main.min.js"))
+    .pipe(gulp.dest("js"))
+    .pipe(sync.stream());
+};
+
+exports.minifyScripts = minifyScripts;
 
 // Styles not minified to source folder, just in case
 // const notMinStyles = () => {
@@ -190,4 +182,4 @@ exports.minifyStyles = minifyStyles;
 
 // Default
 
-exports.default = gulp.series(svgSprite, minifyStyles);
+exports.default = gulp.series(svgSprite, minifyStyles, minifyScripts);
