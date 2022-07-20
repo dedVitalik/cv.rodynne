@@ -9,10 +9,10 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 // const sync = require('browser-sync').create();
 // const htmlmin = require('gulp-htmlmin');
-// const squoosh = require('gulp-libsquoosh');
 // const webp = require('gulp-webp');
 // const del = require('del');
 const svgstore = require('gulp-svgstore');
+const cleanCSS = require('gulp-clean-css');
 
 // svg sprite
 
@@ -30,16 +30,16 @@ const svgSprite = () => {
 
 exports.svgSprite = svgSprite;
 
-// HTML
+// Styles
 
-// const minifyHTML = () => {
-//   return gulp
-//     .src("source/*.html")
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(gulp.dest("build"));
-// };
+const minifyStyles = () => {
+    return gulp.src('css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest('css'));
+};
 
-// exports.minifyHTML = minifyHTML;
+exports.minifyStyles = minifyStyles;
 
 // Styles
 
@@ -55,8 +55,21 @@ exports.svgSprite = svgSprite;
 //     .pipe(gulp.dest("build/css"))
 //     .pipe(sync.stream());
 // };
-
+//
 // exports.minifyStyles = minifyStyles;
+
+// HTML
+
+// const minifyHTML = () => {
+//   return gulp
+//     .src("source/*.html")
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest("build"));
+// };
+
+// exports.minifyHTML = minifyHTML;
+
+
 
 // Scripts
 
@@ -177,4 +190,4 @@ exports.svgSprite = svgSprite;
 
 // Default
 
-exports.default = gulp.series(svgSprite);
+exports.default = gulp.series(svgSprite, minifyStyles);
