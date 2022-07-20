@@ -2,11 +2,10 @@
 <html lang="uk">
   {% include head.html %}
   <body class="preload">
-    <div class="wrapper">
+  <div class="wrapper">
       {% include header.html %} {% if page.url != '/' %} {% include breadcrumbs.html %} {% endif' %} {{ content }} {%
       include footer.html %}
     </div>
     <script src="/js/main.js"></script>
-    <script src="/js/modernizr-custom.js"></script>
   </body>
 </html>

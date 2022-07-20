@@ -1,147 +1,169 @@
 <header class="header">
     <div class="header__row header__row--1">
-      <div class="header__body _container">
-        <a class="header__logo" href="/">
-          <svg>
-            <use xlink:href="/img/sprite/sprite-big.svg#logo"></use>
-          </svg>
-        </a>
-        <div class="header__menu menu">
-          <div class="menu__icon menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <nav class="menu__body">
-            <ul class="menu__list">
-              <li>
-                <a {% if page.url == '/' %}class="_active"{% endif %} href="/" data-title="головна сторінка">
-                  <span>головна сторінка</span>
-                </a>
-              </li>
-              <li>
-                <a {% if page.url == '/foto-pansionatu/' %}class="_active"{% endif %} href="/foto-pansionatu/" data-title="фото пансіонату">
-                  <span>фото пансіонату</span>
-                </a>
-              </li>
-              <li>
-                <a {% if page.url == '/vidhuky/' %}class="_active"{% endif %} href="/vidhuky/" data-title="відгуки">
-                  <span>відгуки</span>
-                </a>
-              </li>
-              <li>
-                <a {% if page.url == '/faqs/' %}class="_active"{% endif %} href="/faqs/" data-title="часті питання">
-                  <span>часті питання</span>
-                </a>
-              </li>
-              <li>
-                <a {% if page.url == '/contacts/' %}class="_active"{% endif %} href="/contacts/" data-title="як нас знайти">
-                  <span>як нас знайти</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <div class="header__body _container">
+            <a class="header__logo" href="/">
+                <svg>
+                    <use xlink:href="/img/sprite/sprite-big.svg#logo"></use>
+                </svg>
+            </a>
+            <div class="header__menu menu">
+                <div class="menu__icon menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li>
+                            <a {% if page.url== '/' %}class="_active"{% endif %} href="/" data-title="головна сторінка">
+                            <span>головна сторінка</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a {% if page.url== '/foto-pansionatu/' %}class="_active"{% endif %}
+                            href="/foto-pansionatu/" data-title="фото пансіонату">
+                            <span>фото пансіонату</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a {% if page.url== '/vidhuky/' %}class="_active"{% endif %} href="/vidhuky/"
+                            data-title="відгуки">
+                            <span>відгуки</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a {% if page.url== '/faqs/' %}class="_active"{% endif %} href="/faqs/" data-title="часті
+                            питання">
+                            <span>часті питання</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a {% if page.url== '/contacts/' %}class="_active"{% endif %} href="/contacts/"
+                            data-title="як нас знайти">
+                            <span>як нас знайти</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__social social">
+                <div class="social__img">
+                    <svg viewBox="0 0 640 480">
+                        <use xlink:href="/img/sprite/sprite-big.svg#all-icons"></use>
+                    </svg>
+                </div>
+                <div class="social__body">
+                    <div class="social__item">
+                        <a href="https://api.whatsapp.com/send?phone=380989919293">
+                            <svg class="social__item">
+                                <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#whatsapp-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="social__item">
+                        <a href="tel:+{{ site.tel1 }}">
+                            <svg class="social__item">
+                                <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#call-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="social__item">
+                        <a href="https://m.me/rodynne.com.ua">
+                            <svg class="social__item">
+                                <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#fbmess-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="social__item">
+                        <a href="https://mssg.me/r/m/5d9e2a3c5d71640037371ea0">
+                            <svg class="social__item">
+                                <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#viber-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="header__social social">
-          <div class="social__img">
-            <svg viewBox="0 0 640 480">
-              <use xlink:href="/img/sprite/sprite-big.svg#all-icons"></use>
-            </svg>
-<!--            <picture>-->
-<!--              <source srcset="/img/header/social.webp" type="image/webp">-->
-<!--              <img src="/img/header/social.png" alt="Варіанти звязку з пансіонатом">-->
-<!--            </picture>-->
-          </div>
-          <div class="social__body">
-            <div class="social__item">
-              <a href="https://api.whatsapp.com/send?phone=380989919293">
-                <svg class="social__item">
-                  <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#whatsapp-icon"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="social__item">
-              <a href="tel:+{{ site.tel1 }}">
-                <svg class="social__item">
-                  <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#call-icon"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="social__item">
-              <a href="https://m.me/rodynne.com.ua">
-                <svg class="social__item">
-                  <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#fbmess-icon"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="social__item">
-              <a href="https://mssg.me/r/m/5d9e2a3c5d71640037371ea0">
-                <svg class="social__item">
-                  <use class="social__item" xlink:href="/img/sprite/sprite-big.svg#viber-icon"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="header__row header__row--2">
-      <div class="header__body _container">
-        <div class="header__settings">
-          <div class="header__language language">
-            <ul class="language__list">
-              <li>
-                <a class="_active" href="#">UA</a>
-              </li>
-              <li>
-                <a href="#">RU</a>
-              </li>
-            </ul>
-          </div>
-          <div class="header__city city">
-            <div class="city__current">
-              <div class="city__icon">
-                <svg viewBox="0 0 32 32">
-                  <use xlink:href="/img/sprite/sprite-big.svg#location"></use>
-                </svg>
-              </div>
-              <span></span>
-              <div class="city__arrow">
-                <svg viewBox="0 0 256 512">
-                  <use xlink:href="/img/sprite/sprite-big.svg#angle-right"></use>
-                </svg>
-              </div>
+        <div class="header__body _container">
+            <div class="header__settings">
+                <div class="header__language language">
+                    <ul class="language__list">
+                        <li>
+                            <a class="_active" href="#">UA</a>
+                        </li>
+                        <li>
+                            <a href="#">RU</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__city city">
+                    <div class="city__current">
+                        <div class="city__icon">
+                            <svg viewBox="0 0 32 32">
+                                <use xlink:href="/img/sprite/sprite-big.svg#location"></use>
+                            </svg>
+                        </div>
+                        <span></span>
+                        <div class="city__arrow">
+                            <svg viewBox="0 0 256 512">
+                                <use xlink:href="/img/sprite/sprite-big.svg#angle-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="city__list">
+                        <li>
+                            <a href="https://rodynne.com.ua/">Львів</a>
+                        </li>
+                        <li>
+                            <a href="https://uz.rodynne.com.ua/">Ужгород</a>
+                        </li>
+                        <li>
+                            <a href="https://te.rodynne.com.ua/">Тернопіль</a>
+                        </li>
+                        <li>
+                            <a href="https://rivne.rodynne.com.ua/">Рівне</a>
+                        </li>
+                        <li>
+                            <a href="https://hmel.rodynne.com.ua/">Хмельницький</a>
+                        </li>
+                        <li>
+                            <a class="_active" href="/">Чернівці</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="city__list">
-              <li>
-                <a href="https://rodynne.com.ua/">Львів</a>
-              </li>
-              <li>
-                <a href="https://uz.rodynne.com.ua/">Ужгород</a>
-              </li>
-              <li>
-                <a href="https://te.rodynne.com.ua/">Тернопіль</a>
-              </li>
-              <li>
-                <a href="https://rivne.rodynne.com.ua/">Рівне</a>
-              </li>
-              <li>
-                <a href="https://hmel.rodynne.com.ua/">Хмельницький</a>
-              </li>
-              <li>
-                <a class="_active" href="/">Чернівці</a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
     </div>
     {% if page.url == '/' %}
-
     {% include clicks_to_contacts_header.html %}
-
     {% endif' %}
-    
-    <div class="header__bg"></div>
+    <div class="header__bg">
+        <picture>
+            <source srcset="/img/header/bg1920.webp"
+                    media="(min-width: 768px)"
+                    type="image/webp"
+            />
+            <source srcset="/img/header/bg1920.jpg"
+                    media="(min-width: 768px)"
+            />
+            <source
+                    srcset="/img/header/bg480.webp"
+                    media="(min-width: 321px)"
+                    type="image/webp"
+            />
+            <source
+                    srcset="/img/header/bg480.jpg"
+                    media="(min-width: 321px)"
+            />
+            <source srcset="/img/header/bg320.webp"
+                    type="image/webp"
+            />
+            <img src="/img/header/bg320.jpg"
+                 alt="Піклуємось - як удома"
+            />
+        </picture>
+    </div>
 </header>

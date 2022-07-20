@@ -691,38 +691,9 @@ h6 {
   background-repeat: no-repeat;
 }
 
-.webp .header__bg {
-  background-image: url(/img/header/bg1920.webp);
-}
-.no-webp .header__bg {
-  background-image: url(/img/header/bg1920.jpg);
-}
-
-@media only screen and (max-width: 768px) {
-  .webp .header__bg {
-    background-image: url(/img/header/bg768.webp);
-  }
-  .no-webp .header__bg {
-    background-image: url(/img/header/bg768.jpg);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .webp .header__bg {
-    background-image: url(/img/header/bg480.webp);
-  }
-  .no-webp .header__bg {
-    background-image: url(/img/header/bg480.jpg);
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .webp .header__bg {
-    background-image: url(/img/header/bg320.webp);
-  }
-  .no-webp .header__bg {
-    background-image: url(/img/header/bg320.jpg);
-  }
+.header__bg img {
+  width: 100%;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 1599px) {
@@ -1633,7 +1604,7 @@ h6 {
   }
 
   .care__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .documents__content {
