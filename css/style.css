@@ -692,6 +692,7 @@ h6 {
 }
 
 .header__bg img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -1322,6 +1323,10 @@ h6 {
     flex: 0 0 100%;
   }
 
+  .footer__col--address span + a {
+    padding-top: 15px;
+  }
+
   .footer__col--cities {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -1656,8 +1661,14 @@ h6 {
     margin: 0 !important;
   }
 
+  .footer__col--social {
+    min-width: 90px;
+    padding-left: 10px;
+  }
+
   .footer__col--address {
     padding-left: 15px;
+    min-width: 200px;
   }
 
   .footer__logo {
