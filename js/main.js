@@ -118,42 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   };
 
-  // WebP Check
-
-  // function testWebP(callback) {
-  //   var webP = new Image();
-  //
-  //   webP.onload = webP.onerror = function () {
-  //     callback(webP.height == 2);
-  //   };
-  //
-  //   webP.src =
-  //     "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-  // }
-
-  // testWebP(function (support) {
-  //   if (support == true) {
-  //     document.querySelector("body").classList.add("webp");
-  //   }
-  // });
-
-  // function setBackground() {
-  //   var setBackground = document.querySelectorAll("._bg");
-  //
-  //   for (var i = 0; i < setBackground.length; i++) {
-  //     if (setBackground[i].querySelector("picture source")) {
-  //       setBackground[i].style.backgroundImage =
-  //         "url(" + setBackground[i].querySelector("picture source").getAttribute("srcset") + ")";
-  //       continue;
-  //     } else if (setBackground[i].querySelector("img")) {
-  //       setBackground[i].style.backgroundImage =
-  //         "url(" + setBackground[i].querySelector("img").getAttribute("src") + ")";
-  //     }
-  //   }
-  // }
-
-  //setBackground(); // DETECT SWIPE
-
   function userSwiped() {
     document.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchmove", handleTouchMove);
@@ -281,39 +245,4 @@ document.addEventListener("DOMContentLoaded", function () {
       headerSelectClose();
     }
   });
-
-  function fixedHeader() {
-    var header = document.querySelector(".header");
-    var headerCopy = header.cloneNode(true);
-    headerCopy.classList.add("_copy");
-    var wrapper = document.querySelector(".wrapper");
-
-    function handler() {
-      if (window.innerWidth >= 768) {
-        if (window.pageYOffset > 300) {
-          if (wrapper.children[0] === headerCopy) return;
-          wrapper.prepend(headerCopy);
-        } else {
-          headerCopy.remove();
-        }
-      }
-    }
-
-    handler();
-    window.addEventListener("scroll", handler);
-    var mq = window.matchMedia("screen and (min-width: 768px)");
-
-    function removeCopy(mq) {
-      if (!mq.matches && headerCopy) {
-        headerCopy.remove();
-      } else {
-        handler();
-      }
-    }
-
-    removeCopy(mq);
-    mq.addEventListener("change", removeCopy);
-  }
-
-  fixedHeader();
 });
