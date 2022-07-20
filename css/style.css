@@ -144,10 +144,15 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  visibility: hidden;
+}
+
+.pluses ._bg img {
+  border-radius: 50%;
+}
+
+.care ._bg img {
+  width: 100%;
+  height: 100%;
 }
 
 .parallax__container {
