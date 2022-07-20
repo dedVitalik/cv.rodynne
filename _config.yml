@@ -11,3 +11,10 @@ exclude:
   - /js/!main.min.js
   - /js/main - Copy.js
   - /source/
+  - gulpfile.js
+  - package.json
+  - README.md
+  - .gitignore
+  - .DS_Store
+  - .editorconfig
+  - package-lock.json
